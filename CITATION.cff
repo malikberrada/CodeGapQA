@@ -1,18 +1,26 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the preprint and the archived release."
-title: "CodeGapQA: Hardware-Oriented HCS-Inspired QPU Certification"
+message: If you use this repository, please cite the preprint and the archived release.
+title: 'CodeGapQA: Hardware-Oriented HCS-Inspired QPU Certification'
 type: software
 authors:
-  - family-names: Berrada
-    given-names: Abdelmalik
+- family-names: Berrada
+  given-names: Abdelmalik
 version: 0.6.0
 date-released: 2026-07-31
 license: Apache-2.0
 preferred-citation:
   type: article
-  title: "Hardware-Oriented Hidden-Code-Sampling-Inspired Certification on a 60-Qubit Superconducting Processor"
+  title: Hardware-Oriented Hidden-Code-Sampling-Inspired Certification on a 60-Qubit
+    Superconducting Processor
   authors:
-    - family-names: Berrada
-      given-names: Abdelmalik
+  - family-names: Berrada
+    given-names: Abdelmalik
   year: 2026
-  notes: "Preprint; not peer reviewed. Zenodo DOI to be added after publication."
+  notes: Preprint; not peer reviewed.
+  version: 1.0.0
+  publisher: Zenodo
+  doi: 10.5281/zenodo.21724982
+  url: https://doi.org/10.5281/zenodo.21724982
+doi: 10.5281/zenodo.21724982
+url: https://doi.org/10.5281/zenodo.21724982
+repository-code: https://github.com/malikberrada/CodeGapQA

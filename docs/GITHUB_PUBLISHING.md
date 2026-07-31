@@ -25,3 +25,13 @@ each tag.
 
 Never force-add files ignored by `.gitignore` unless they have been independently
 reviewed and sanitized.
+## Repository description
+
+Set the GitHub repository description to:
+
+```text
+Reproducible 60-qubit HCS-inspired QPU certification with public QASM, finite-shot analysis, tests, and Zenodo DOI: 10.5281/zenodo.21724982
+```
+
+The DOI points to the archived preprint version 1.0.0.
+

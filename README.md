@@ -1,5 +1,7 @@
 # CodeGapQA
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21724982.svg)](https://doi.org/10.5281/zenodo.21724982)
+
 CodeGapQA is a research framework for hardware-oriented quantum-circuit
 co-design, local-witness certification, finite-shot uncertainty analysis, and
 registered classical-attack benchmarking.
@@ -118,5 +120,7 @@ Computing of the findings, interpretations, or conclusions.
 
 ## Citation
 
-Use `CITATION.cff`. Add the Zenodo DOI to your citation after the record is
-published.
+Berrada, A. (2026). Hardware-Oriented Hidden-Code-Sampling-Inspired Certification on a 60-Qubit Superconducting Processor (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.21724982
+
+The archived preprint is permanently available at [10.5281/zenodo.21724982](https://doi.org/10.5281/zenodo.21724982).
+Machine-readable citation metadata are provided in `CITATION.cff`.

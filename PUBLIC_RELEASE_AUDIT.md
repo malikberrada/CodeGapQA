@@ -3,13 +3,14 @@
 - Release: 1.0.0
 - Python package version: 0.6.0
 - Source archive files inspected: 5476
-- Public repository files before the release manifest: 124
+- Public repository files before the release manifest: 121
 - Python package files: 44
 - Test files: 27
 - Editable installation: PASS
 - Full pytest suite: PASS (one skipped test)
 - Offline public certificate verification: PASS
 - PDF render verification: PASS (12 pages)
+- Zenodo DOI metadata: PASS (10.5281/zenodo.21724982)
 - Public QASM aliases: confirmatory-fold-1, confirmatory-fold-3, confirmatory-fold-5
 - Actual UUID values in public text: 0
 - Private email addresses in public text: 0

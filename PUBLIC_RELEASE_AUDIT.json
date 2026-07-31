@@ -3,7 +3,7 @@
   "release": "1.0.0",
   "package_version": "0.6.0",
   "source_archive_file_count": 5476,
-  "public_repository_file_count_before_release_manifest": 124,
+  "public_repository_file_count_before_release_manifest": 121,
   "python_package_file_count": 44,
   "test_file_count": 27,
   "public_qasm_files": [
@@ -33,5 +33,7 @@
   "notes": [
     "Generic source-code field names such as job_id or credentials remain where required by the SDK abstraction; no real values are present.",
     "The public paper and data are publication artifacts, not provider execution ledgers."
-  ]
+  ],
+  "zenodo_doi": "10.5281/zenodo.21724982",
+  "zenodo_doi_metadata": "PASS"
 }
