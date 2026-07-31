@@ -1,0 +1,523 @@
+{
+  "seed": 20260725,
+  "search": {
+    "families": [
+      {
+        "l": 3,
+        "m": 4,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 5000,
+        "mode": "random"
+      },
+      {
+        "l": 4,
+        "m": 4,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 5000,
+        "mode": "random"
+      },
+      {
+        "l": 4,
+        "m": 5,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 4000,
+        "mode": "random"
+      },
+      {
+        "l": 4,
+        "m": 6,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 4000,
+        "mode": "random"
+      },
+      {
+        "l": 4,
+        "m": 8,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 2000,
+        "mode": "random"
+      },
+      {
+        "l": 5,
+        "m": 8,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 256,
+        "mode": "random"
+      },
+      {
+        "l": 6,
+        "m": 8,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 128,
+        "mode": "random"
+      }
+    ]
+  },
+  "constraints": {
+    "min_d_x": 3,
+    "min_d_z": 3,
+    "min_k": 2,
+    "max_exact_kernel_dimension": 20,
+    "max_two_qubit_count": 768,
+    "max_two_qubit_depth": 32,
+    "max_swaps": 0,
+    "max_nonlocal_edges": 0
+  },
+  "hardware": {
+    "rows": 9,
+    "cols": 12,
+    "module_rows": 3,
+    "module_cols": 4,
+    "name": "cepheus-proxy-9x12",
+    "layout_iterations": 750,
+    "target_snapshot": "artifacts/target_snapshot.json",
+    "disconnected_topology_policy": "largest_connected_component"
+  },
+  "codesign": {
+    "mixing_layers": 12,
+    "axes": [
+      "zz",
+      "xx"
+    ],
+    "require_css_automorphism_matchings": true,
+    "max_verifier_masks": 32,
+    "max_automorphism_matchings": 96,
+    "relation_mode": "tracked_css_wire_frame"
+  },
+  "circuit": {
+    "theta_single": 0.39269908169872414,
+    "theta_pair": 0.4487989505128276,
+    "max_exact_qubits": 20
+  },
+  "certificate": {
+    "alpha": 0.01,
+    "heavy_features": 0,
+    "max_parity_features": 32,
+    "max_lightcone_qubits": 18,
+    "analytic_noise_parameter_sigma": 0.05,
+    "adversary_generalization_penalty": 0.015,
+    "analytic_adversaries": {
+      "max_abs_bit_bias": 0.15,
+      "max_abs_local_correlation": 0.2
+    }
+  },
+  "noise": {
+    "training_shots": 10000,
+    "test_shots": 20000,
+    "repeats": 20,
+    "grid": {
+      "p_1q": [
+        0.0,
+        0.001,
+        0.003
+      ],
+      "p_2q": [
+        0.0,
+        0.003,
+        0.006,
+        0.01
+      ],
+      "p_measure": [
+        0.0,
+        0.005,
+        0.01,
+        0.02
+      ],
+      "coherent_angle": [
+        0.0,
+        0.01,
+        0.03
+      ],
+      "crosstalk": [
+        0.0,
+        0.001,
+        0.003
+      ],
+      "drift": [
+        0.0,
+        0.001
+      ]
+    }
+  },
+  "hardness": {
+    "assumptions": [
+      "Polynomial hierarchy does not collapse.",
+      "Average-case hardness conjecture for the selected verifiable code-sampling family.",
+      "No unregistered structure-specific classical attack beats the registered suite."
+    ],
+    "pauli_truncation_order": 6,
+    "cotengra": {
+      "enabled": true,
+      "refine_top_candidates": 6,
+      "methods": [
+        "greedy"
+      ],
+      "max_repeats": 32,
+      "minimize": "combo",
+      "optlib": "random",
+      "progbar": false
+    }
+  },
+  "objective_weights": {
+    "lambda_depth": 0.02,
+    "mu_twoq": 0.0005
+  },
+  "gates": {
+    "min_noise_pass_probability": 0.95,
+    "min_gamma_log10": 6.0,
+    "noise_envelope": {
+      "p_1q": 0.003,
+      "p_2q": 0.006,
+      "p_measure": 0.01,
+      "coherent_angle": 0.01,
+      "crosstalk": 0.001,
+      "drift": 0.001
+    },
+    "max_noise_candidates": 12
+  },
+  "qpu": {
+    "backend": "rigetti:cepheus-1-108q",
+    "gate_a_native": {
+      "max_swaps": 0,
+      "max_nonlocal_edges": 0,
+      "require_backend_target_embedding": true,
+      "require_measurement_map_validation": true,
+      "require_native_two_qubit_gates": true
+    },
+    "probe_shots": 4000,
+    "diagnostic_shots": 10000,
+    "final_shots": 100000,
+    "probe_acceptance": {
+      "minimum_convention_accuracy": 0.98,
+      "maximum_readout_error": 0.08,
+      "maximum_model_mismatch": 0.08,
+      "tv_radius_safety_factor": 0.5
+    },
+    "diagnostic": {
+      "alpha": 0.05,
+      "adversary_generalization_penalty": 0.02,
+      "minimum_margin_lcb": 0.0
+    },
+    "final": {
+      "alpha": 0.01,
+      "adversary_generalization_penalty": 0.02,
+      "minimum_margin_lcb": 0.0
+    }
+  },
+  "progress": {
+    "enabled": true,
+    "mininterval": 0.2,
+    "leave_nested": false,
+    "dynamic_ncols": true
+  },
+  "acceleration": {
+    "backend": "auto",
+    "batch_size": 8192,
+    "cpu_threads": 0,
+    "cuda_min_batch": 1,
+    "native_layout": true,
+    "native_family_screen": true,
+    "native_apsp": true,
+    "native_layout_restarts": 8,
+    "native_jaccard": true,
+    "strict_native": true,
+    "library": "codegap-accelerate==0.2.0"
+  },
+  "schedule_search": {
+    "enabled": true,
+    "max_code_representatives": 10,
+    "codes_per_size": 1,
+    "schedules_per_code": 96,
+    "depths": [
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "axes": [
+      "zz",
+      "xx"
+    ],
+    "angle_scales": [
+      0.75,
+      1.0,
+      1.25
+    ],
+    "max_automorphism_matchings": 96,
+    "min_unique_matchings": 3,
+    "min_transition_jaccard": 0.25,
+    "keep_after_cutwidth": 32,
+    "keep_after_line_graph": 12,
+    "cotengra_short": {
+      "max_repeats": 16,
+      "temperature": [
+        0.01,
+        0.1
+      ]
+    },
+    "deep_finalists": 2,
+    "cotengra_deep": {
+      "methods": [
+        "greedy"
+      ],
+      "max_repeats": 64,
+      "max_time": "equil:32",
+      "minimize": "combo",
+      "optlib": "random",
+      "parallel": false,
+      "reconfigure": true,
+      "reconf_opts": {},
+      "progbar": false
+    },
+    "return_finalists_per_code": 2,
+    "target_width_min": 17.0,
+    "min_cotengra_flops": 192000000.0,
+    "require_cotengra": true,
+    "objective": {
+      "lambda_depth": 0.02,
+      "mu_twoq": 0.0005,
+      "rho_lightcone": 0.02,
+      "eta_local_rank": 0.05,
+      "eta_witness_margin": 0.25
+    },
+    "require_live_target_snapshot": true,
+    "embedding_max_states": 2000000,
+    "embedding_timeout_seconds": 10.0,
+    "embedding_heuristic_iterations": 10000,
+    "matching_source": "target_native_tracked_frame",
+    "target_layout_trials": 24,
+    "target_matching_trials": 512,
+    "target_minimum_matchings": 3,
+    "protected_schedule_fraction": 0.7,
+    "protected_check_max_weight": 8,
+    "max_protected_templates": 32
+  },
+  "verifier_search": {
+    "enabled": true,
+    "gpu_backend": "auto",
+    "exact_backend": "auto",
+    "cuda_min_observables": 8,
+    "max_lightcone_qubits": 18,
+    "max_candidate_masks": 384,
+    "candidate_max_weight": 8,
+    "combination_base_rows": 32,
+    "include_matching_edge_masks": true,
+    "max_exact_observables_per_schedule": 40,
+    "max_selected_observables": 20,
+    "min_abs_expectation": 0.02,
+    "min_local_observables": 4,
+    "min_local_rank": 4,
+    "min_witness_margin_lcb": 0.0,
+    "min_coverage_fraction": 0.04,
+    "min_protected_checks": 0,
+    "min_linked_two_qubit_layers": 4,
+    "min_linked_axes": 2,
+    "cone_score_penalty": 0.002,
+    "min_template_protected_checks": 0,
+    "min_exact_local_certified_checks": 4,
+    "witness_optimizer": "multifeature_pair_lp",
+    "min_active_witness_features": 2,
+    "witness_support_size": 2,
+    "max_abs_witness_weight": 0.8,
+    "witness_candidate_limit": 16,
+    "verify_cost_mode": "full_selected_audit"
+  },
+  "recovery": {
+    "candidate_priority": [
+      "9bbe54b1ba83a355",
+      "5f51b108bc222837"
+    ]
+  },
+  "research_triad": {
+    "mode": "proxy",
+    "family_search": {
+      "families": [
+        {
+          "type": "bivariate_bicycle",
+          "dimensions": [
+            3,
+            4
+          ],
+          "weight_a": 3,
+          "weight_b": 3,
+          "max_candidates": 96
+        },
+        {
+          "type": "bivariate_bicycle",
+          "dimensions": [
+            3,
+            5
+          ],
+          "weight_a": 3,
+          "weight_b": 3,
+          "max_candidates": 96
+        },
+        {
+          "type": "bivariate_bicycle",
+          "dimensions": [
+            4,
+            4
+          ],
+          "weight_a": 3,
+          "weight_b": 3,
+          "max_candidates": 96
+        },
+        {
+          "type": "bivariate_bicycle",
+          "dimensions": [
+            3,
+            6
+          ],
+          "weight_a": 3,
+          "weight_b": 3,
+          "max_candidates": 96
+        },
+        {
+          "type": "bivariate_bicycle",
+          "dimensions": [
+            4,
+            5
+          ],
+          "weight_a": 3,
+          "weight_b": 3,
+          "max_candidates": 96
+        },
+        {
+          "type": "bivariate_bicycle",
+          "dimensions": [
+            4,
+            6
+          ],
+          "weight_a": 3,
+          "weight_b": 3,
+          "max_candidates": 96
+        },
+        {
+          "type": "trivariate_bicycle",
+          "dimensions": [
+            2,
+            2,
+            3
+          ],
+          "weight_a": 2,
+          "weight_b": 2,
+          "max_candidates": 96
+        },
+        {
+          "type": "trivariate_bicycle",
+          "dimensions": [
+            2,
+            2,
+            4
+          ],
+          "weight_a": 2,
+          "weight_b": 3,
+          "max_candidates": 96
+        },
+        {
+          "type": "trivariate_bicycle",
+          "dimensions": [
+            2,
+            3,
+            3
+          ],
+          "weight_a": 2,
+          "weight_b": 3,
+          "max_candidates": 96
+        },
+        {
+          "type": "trivariate_bicycle",
+          "dimensions": [
+            2,
+            3,
+            4
+          ],
+          "weight_a": 3,
+          "weight_b": 3,
+          "max_candidates": 96
+        },
+        {
+          "type": "trivariate_bicycle",
+          "dimensions": [
+            2,
+            3,
+            5
+          ],
+          "weight_a": 2,
+          "weight_b": 3,
+          "max_candidates": 64
+        }
+      ],
+      "max_qubits": 60,
+      "representatives_per_family_size": 1,
+      "max_code_representatives": 10,
+      "layout_iterations": 750,
+      "code_score": {
+        "distance": 5.0,
+        "logical_rate": 14.0,
+        "logical_qubits": 0.25,
+        "check_weight": 0.25,
+        "nonlocal_edges": 0.08,
+        "swaps": 0.03,
+        "qubits": 0.004
+      }
+    },
+    "robustness": {
+      "calibration_certificate": "../artifacts/cepheus-qpu-final-certificate-v089-fresh/final_certificate.json",
+      "minimum_assignment_determinant": 0.75,
+      "maximum_assignment_error": 0.1,
+      "calibration_interval_half_width": 0.025,
+      "readout_mitigation": true,
+      "residual_measurement_fraction": 0.25,
+      "shots": 100000,
+      "alpha": 0.01,
+      "adversary_generalization_penalty": 0.02,
+      "minimum_margin_lcb": 0.0,
+      "grid_points": 21,
+      "envelope_samples": 512,
+      "optimization_seed": 20260725,
+      "envelope": {
+        "p_1q": 0.003,
+        "p_2q": 0.006,
+        "p_measure": 0.08,
+        "coherent_angle": 0.01,
+        "crosstalk": 0.001,
+        "drift": 0.001
+      },
+      "single_qubit_depolarizing_factor": 1.3333333333333333,
+      "two_qubit_depolarizing_factor": 1.0666666666666667,
+      "crosstalk_tv_multiplier": 8.0,
+      "drift_tv_multiplier": 4.0
+    },
+    "objective": {
+      "gamma": 1.0,
+      "robust_margin": 5.0,
+      "critical_noise_scale": 2.0,
+      "logical_rate": 4.0,
+      "qubits": 0.035,
+      "depth": 0.04,
+      "two_qubit_count": 0.0008,
+      "swaps": 0.5,
+      "structural_simulation_risk": 2.5
+    },
+    "minimal_qubit": {
+      "gamma_targets": [
+        4.0,
+        6.0,
+        8.0,
+        10.0
+      ],
+      "minimum_robust_margin": 0.0,
+      "minimum_distance": 3,
+      "maximum_structural_simulation_risk": 0.55
+    }
+  }
+}

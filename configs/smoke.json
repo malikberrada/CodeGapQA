@@ -1,0 +1,249 @@
+{
+  "seed": 20260723,
+  "search": {
+    "families": [
+      {
+        "l": 2,
+        "m": 3,
+        "weight_a": 2,
+        "weight_b": 2,
+        "max_candidates": 225,
+        "mode": "exhaustive"
+      }
+    ]
+  },
+  "constraints": {
+    "min_d_x": 2,
+    "min_d_z": 2,
+    "min_k": 1,
+    "max_exact_kernel_dimension": 18,
+    "max_two_qubit_count": 200,
+    "max_two_qubit_depth": 100,
+    "max_swaps": 500,
+    "max_nonlocal_edges": 500
+  },
+  "hardware": {
+    "rows": 3,
+    "cols": 4,
+    "module_rows": 0,
+    "module_cols": 0,
+    "name": "smoke-grid-3x4",
+    "layout_iterations": 100
+  },
+  "circuit": {
+    "theta_single": 0.37,
+    "theta_pair": 0.41,
+    "max_exact_qubits": 16
+  },
+  "certificate": {
+    "alpha": 0.05,
+    "heavy_features": 4,
+    "max_parity_features": 16,
+    "adversary_generalization_penalty": 0.01,
+    "max_lightcone_qubits": 16,
+    "analytic_noise_parameter_sigma": 0.05,
+    "analytic_adversaries": {
+      "max_abs_bit_bias": 0.15,
+      "max_abs_local_correlation": 0.2
+    }
+  },
+  "noise": {
+    "training_shots": 1500,
+    "test_shots": 1500,
+    "repeats": 3,
+    "grid": {
+      "p_1q": [
+        0.0,
+        0.002
+      ],
+      "p_2q": [
+        0.0,
+        0.005
+      ],
+      "p_measure": [
+        0.0,
+        0.01
+      ],
+      "coherent_angle": [
+        0.0
+      ],
+      "crosstalk": [
+        0.0
+      ],
+      "drift": [
+        0.0
+      ]
+    }
+  },
+  "hardness": {
+    "assumptions": [
+      "Average-case hardness of the selected sampling family.",
+      "No undiscovered structure-specific classical attack beats the registered suite."
+    ],
+    "cotengra": {
+      "enabled": false
+    }
+  },
+  "objective_weights": {
+    "lambda_depth": 0.0,
+    "mu_twoq": 0.0
+  },
+  "gates": {
+    "min_noise_pass_probability": 0.66,
+    "min_gamma_log10": 0.5,
+    "noise_envelope": {
+      "p_1q": 0.002,
+      "p_2q": 0.005,
+      "p_measure": 0.01,
+      "coherent_angle": 0.0,
+      "crosstalk": 0.0,
+      "drift": 0.0
+    },
+    "max_noise_candidates": 8
+  },
+  "qpu": {
+    "backend": "rigetti:cepheus-1-108q",
+    "probe_shots": 1000,
+    "diagnostic_shots": 3000,
+    "final_shots": 10000,
+    "probe_acceptance": {
+      "minimum_convention_accuracy": 0.9,
+      "maximum_readout_error": 0.2,
+      "maximum_model_mismatch": 0.2,
+      "tv_radius_safety_factor": 0.8
+    },
+    "diagnostic": {
+      "alpha": 0.05,
+      "adversary_generalization_penalty": 0.02,
+      "minimum_margin_lcb": 0.0
+    },
+    "final": {
+      "alpha": 0.01,
+      "adversary_generalization_penalty": 0.02,
+      "minimum_margin_lcb": 0.0
+    },
+    "gate_a_native": {
+      "max_swaps": 0,
+      "max_nonlocal_edges": 0,
+      "require_backend_target_embedding": true,
+      "require_measurement_map_validation": true,
+      "require_native_two_qubit_gates": true
+    }
+  },
+  "progress": {
+    "enabled": true,
+    "mininterval": 0.2,
+    "leave_nested": false,
+    "dynamic_ncols": true
+  },
+  "acceleration": {
+    "backend": "auto",
+    "batch_size": 256,
+    "cpu_threads": 0,
+    "cuda_min_batch": 2048,
+    "native_layout": true
+  },
+  "codesign": {
+    "mixing_layers": 3,
+    "axes": [
+      "zz",
+      "xx"
+    ],
+    "require_css_automorphism_matchings": true,
+    "max_verifier_masks": 8,
+    "max_automorphism_matchings": 16
+  },
+  "schedule_search": {
+    "enabled": true,
+    "max_code_representatives": 2,
+    "codes_per_size": 2,
+    "schedules_per_code": 12,
+    "depths": [
+      2,
+      3
+    ],
+    "axes": [
+      "zz",
+      "xx"
+    ],
+    "angle_scales": [
+      1.0
+    ],
+    "max_automorphism_matchings": 16,
+    "min_unique_matchings": 1,
+    "min_transition_jaccard": 0.0,
+    "require_proxy_zero_swap": false,
+    "keep_after_cutwidth": 6,
+    "keep_after_line_graph": 3,
+    "cotengra_short": {
+      "max_repeats": 2,
+      "temperature": [
+        0.01,
+        0.1
+      ]
+    },
+    "deep_finalists": 2,
+    "cotengra_deep": {
+      "methods": [
+        "greedy"
+      ],
+      "max_repeats": 2,
+      "minimize": "combo",
+      "optlib": "random",
+      "parallel": false,
+      "reconfigure": false,
+      "progbar": false
+    },
+    "return_finalists_per_code": 1,
+    "target_width_min": 1.0,
+    "min_cotengra_flops": 1.0,
+    "require_cotengra": false,
+    "objective": {
+      "lambda_depth": 0.0,
+      "mu_twoq": 0.0,
+      "rho_lightcone": 0.02,
+      "eta_local_rank": 0.05,
+      "eta_witness_margin": 0.25
+    },
+    "require_live_target_snapshot": false,
+    "protected_schedule_fraction": 0.5,
+    "protected_check_max_weight": 8,
+    "max_protected_templates": 32
+  },
+  "verifier_search": {
+    "enabled": true,
+    "gpu_backend": "auto",
+    "exact_backend": "auto",
+    "cuda_min_observables": 8,
+    "max_lightcone_qubits": 18,
+    "max_candidate_masks": 128,
+    "candidate_max_weight": 8,
+    "combination_base_rows": 16,
+    "include_matching_edge_masks": true,
+    "max_exact_observables_per_schedule": 16,
+    "max_selected_observables": 8,
+    "min_abs_expectation": 0.0,
+    "min_local_observables": 1,
+    "min_local_rank": 1,
+    "min_witness_margin_lcb": -1.0,
+    "min_coverage_fraction": 0.0,
+    "min_protected_checks": 0,
+    "min_linked_two_qubit_layers": 1,
+    "min_linked_axes": 1,
+    "cone_score_penalty": 0.002,
+    "min_template_protected_checks": 0,
+    "min_exact_local_certified_checks": 1,
+    "witness_optimizer": "multifeature_pair_lp",
+    "min_active_witness_features": 2,
+    "witness_support_size": 2,
+    "max_abs_witness_weight": 0.8,
+    "witness_candidate_limit": 16,
+    "verify_cost_mode": "full_selected_audit"
+  },
+  "recovery": {
+    "candidate_priority": [
+      "9bbe54b1ba83a355",
+      "5f51b108bc222837"
+    ]
+  }
+}

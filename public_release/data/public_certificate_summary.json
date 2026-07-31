@@ -1,0 +1,43 @@
+{
+  "schema": "codegap.public-qpu-panel-pass-summary.v1",
+  "status": "QPU_PANEL_PASS",
+  "public_candidate_name": "codegapqa-60q-v1",
+  "public_circuits": [
+    {
+      "name": "confirmatory-fold-1",
+      "folding_factor": 1,
+      "shots": 10000
+    },
+    {
+      "name": "confirmatory-fold-3",
+      "folding_factor": 3,
+      "shots": 10000
+    },
+    {
+      "name": "confirmatory-fold-5",
+      "folding_factor": 5,
+      "shots": 10000
+    }
+  ],
+  "hardware_provider": "Rigetti Computing",
+  "processor_model": "Cepheus-1-108Q",
+  "access_platform": "Open Quantum",
+  "platform_operator": "Quantum Rings",
+  "active_qubits": 60,
+  "folding_factors": [
+    1,
+    3,
+    5
+  ],
+  "science_shots_per_fold": 10000,
+  "calibration_shots_per_pattern_per_period": 4000,
+  "base_margin_lcb": 0.29525888083847984,
+  "minimum_margin_lcb": 0.2857977493496223,
+  "folds_passed": 3,
+  "gamma_log10": 6.555353469446106,
+  "gamma_target": 6.0,
+  "pilot_counts_excluded": true,
+  "confirmatory_data_independent_of_witness_selection": true,
+  "qasm_identities_and_authorization_hashes_verified": true,
+  "claim_boundary": "Hardware-oriented HCS-inspired local-witness certificate; no full-distribution total-variation certificate, universal classical lower bound, or wall-clock quantum speedup is claimed."
+}

@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.dylib
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.venv/
+venv/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets and provider identity
+.env
+.env.*
+*.pem
+*.key
+*credential*.json
+credentials*.json
+*sdk-key*.json
+*api-key*.json
+*token*.json
+*account*.json
+
+# Private QPU operations and provider records
+artifacts/
+archives/
+private_audit/
+submission.json
+submission.*.json
+raw_counts.json
+raw_counts_shards.json
+provider_*.json
+*job*.json
+*organization*.json
+
+# Historical local patching / backup material
+.codegap_*/
+*backup*/
+*.bak
+*.before-*
+codegap-*-fix/
+codegap-*-fix.zip

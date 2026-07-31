@@ -1,0 +1,37 @@
+{
+  "schema": "codegap.public-github-release-audit.v1",
+  "release": "1.0.0",
+  "package_version": "0.6.0",
+  "source_archive_file_count": 5476,
+  "public_repository_file_count_before_release_manifest": 124,
+  "python_package_file_count": 44,
+  "test_file_count": 27,
+  "public_qasm_files": [
+    "confirmatory-fold-1.qasm3",
+    "confirmatory-fold-3.qasm3",
+    "confirmatory-fold-5.qasm3"
+  ],
+  "credential_or_account_named_source_files_excluded": 42,
+  "backup_patch_or_historical_named_source_files_excluded": 104,
+  "actual_uuid_values_found_in_public_text": 0,
+  "private_email_addresses_found_in_public_text": 0,
+  "private_absolute_windows_paths_found_in_public_text": 0,
+  "provider_job_uuid_values_found_in_public_text": 0,
+  "credential_files_included": false,
+  "private_submission_ledgers_included": false,
+  "raw_provider_artifacts_included": false,
+  "historical_account_or_attempt_records_included": false,
+  "compiled_local_binaries_included": false,
+  "cache_directories_included": false,
+  "public_aliases_verified": true,
+  "public_release_verifier": "PASS",
+  "pytest": "PASS",
+  "pytest_output": "one skipped test; all executed tests passed",
+  "editable_install": "PASS",
+  "pdf_pages": 12,
+  "pdf_render": "PASS",
+  "notes": [
+    "Generic source-code field names such as job_id or credentials remain where required by the SDK abstraction; no real values are present.",
+    "The public paper and data are publication artifacts, not provider execution ledgers."
+  ]
+}

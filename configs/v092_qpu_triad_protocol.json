@@ -1,0 +1,18 @@
+{
+  "qpu_triad": {
+    "maximum_calibration_qubits": 6,
+    "calibration_shots": 4000,
+    "science_shots": 10000,
+    "minimum_assignment_determinant": 0.75,
+    "minimum_convention_accuracy": 0.9,
+    "minimum_convention_margin": 0.2,
+    "minimum_margin_lcb": 0.0,
+    "adversary_generalization_penalty": 0.02,
+    "alpha_total": 0.01,
+    "alpha_calibration_total": 0.003,
+    "alpha_science_total": 0.007,
+    "optimization_seed": 20260725,
+    "optimization_safety_epsilon": 0.0001,
+    "gamma_target": 6.0
+  }
+}

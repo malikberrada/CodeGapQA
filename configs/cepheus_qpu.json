@@ -1,0 +1,332 @@
+{
+  "seed": 20260723,
+  "search": {
+    "families": [
+      {
+        "l": 3,
+        "m": 4,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 5000,
+        "mode": "random"
+      },
+      {
+        "l": 4,
+        "m": 4,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 5000,
+        "mode": "random"
+      },
+      {
+        "l": 4,
+        "m": 5,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 4000,
+        "mode": "random"
+      },
+      {
+        "l": 4,
+        "m": 6,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 4000,
+        "mode": "random"
+      },
+      {
+        "l": 4,
+        "m": 8,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 2000,
+        "mode": "random"
+      },
+      {
+        "l": 5,
+        "m": 8,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 256,
+        "mode": "random"
+      },
+      {
+        "l": 6,
+        "m": 8,
+        "weight_a": 3,
+        "weight_b": 3,
+        "max_candidates": 128,
+        "mode": "random"
+      }
+    ]
+  },
+  "constraints": {
+    "min_d_x": 4,
+    "min_d_z": 4,
+    "min_k": 2,
+    "max_exact_kernel_dimension": 22,
+    "max_two_qubit_count": 768,
+    "max_two_qubit_depth": 16,
+    "max_swaps": 0,
+    "max_nonlocal_edges": 0
+  },
+  "hardware": {
+    "rows": 9,
+    "cols": 12,
+    "module_rows": 3,
+    "module_cols": 4,
+    "name": "cepheus-proxy-9x12",
+    "layout_iterations": 3000,
+    "target_snapshot": "artifacts/target_snapshot.json"
+  },
+  "codesign": {
+    "mixing_layers": 12,
+    "axes": [
+      "zz",
+      "xx"
+    ],
+    "require_css_automorphism_matchings": true,
+    "max_verifier_masks": 32,
+    "max_automorphism_matchings": 96,
+    "relation_mode": "tracked_css_wire_frame"
+  },
+  "circuit": {
+    "theta_single": 0.39269908169872414,
+    "theta_pair": 0.4487989505128276,
+    "max_exact_qubits": 20
+  },
+  "certificate": {
+    "alpha": 0.01,
+    "heavy_features": 0,
+    "max_parity_features": 32,
+    "max_lightcone_qubits": 18,
+    "analytic_noise_parameter_sigma": 0.05,
+    "adversary_generalization_penalty": 0.015,
+    "analytic_adversaries": {
+      "max_abs_bit_bias": 0.15,
+      "max_abs_local_correlation": 0.2
+    }
+  },
+  "noise": {
+    "training_shots": 10000,
+    "test_shots": 20000,
+    "repeats": 20,
+    "grid": {
+      "p_1q": [
+        0.0,
+        0.001,
+        0.003
+      ],
+      "p_2q": [
+        0.0,
+        0.003,
+        0.006,
+        0.01
+      ],
+      "p_measure": [
+        0.0,
+        0.005,
+        0.01,
+        0.02
+      ],
+      "coherent_angle": [
+        0.0,
+        0.01,
+        0.03
+      ],
+      "crosstalk": [
+        0.0,
+        0.001,
+        0.003
+      ],
+      "drift": [
+        0.0,
+        0.001
+      ]
+    }
+  },
+  "hardness": {
+    "assumptions": [
+      "Polynomial hierarchy does not collapse.",
+      "Average-case hardness conjecture for the selected verifiable code-sampling family.",
+      "No unregistered structure-specific classical attack beats the registered suite."
+    ],
+    "pauli_truncation_order": 6,
+    "cotengra": {
+      "enabled": false,
+      "refine_top_candidates": 8,
+      "methods": [
+        "greedy"
+      ],
+      "max_repeats": 16,
+      "minimize": "combo",
+      "optlib": "random",
+      "progbar": false
+    }
+  },
+  "objective_weights": {
+    "lambda_depth": 0.02,
+    "mu_twoq": 0.0005
+  },
+  "gates": {
+    "min_noise_pass_probability": 0.95,
+    "min_gamma_log10": 6.0,
+    "noise_envelope": {
+      "p_1q": 0.003,
+      "p_2q": 0.006,
+      "p_measure": 0.01,
+      "coherent_angle": 0.01,
+      "crosstalk": 0.001,
+      "drift": 0.001
+    },
+    "max_noise_candidates": 12
+  },
+  "qpu": {
+    "backend": "rigetti:cepheus-1-108q",
+    "gate_a_native": {
+      "max_swaps": 0,
+      "max_nonlocal_edges": 0,
+      "require_backend_target_embedding": true,
+      "require_measurement_map_validation": true,
+      "require_native_two_qubit_gates": true
+    },
+    "probe_shots": 4000,
+    "diagnostic_shots": 10000,
+    "final_shots": 100000,
+    "probe_acceptance": {
+      "minimum_convention_accuracy": 0.98,
+      "maximum_readout_error": 0.08,
+      "maximum_model_mismatch": 0.08,
+      "tv_radius_safety_factor": 0.5
+    },
+    "diagnostic": {
+      "alpha": 0.05,
+      "adversary_generalization_penalty": 0.02,
+      "minimum_margin_lcb": 0.0
+    },
+    "final": {
+      "alpha": 0.01,
+      "adversary_generalization_penalty": 0.02,
+      "minimum_margin_lcb": 0.0
+    }
+  },
+  "progress": {
+    "enabled": true,
+    "mininterval": 0.2,
+    "leave_nested": false,
+    "dynamic_ncols": true
+  },
+  "acceleration": {
+    "backend": "auto",
+    "batch_size": 8192,
+    "cpu_threads": 0,
+    "cuda_min_batch": 1,
+    "native_layout": true
+  },
+  "schedule_search": {
+    "enabled": true,
+    "max_code_representatives": 14,
+    "codes_per_size": 2,
+    "schedules_per_code": 256,
+    "depths": [
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "axes": [
+      "zz",
+      "xx"
+    ],
+    "angle_scales": [
+      0.75,
+      1.0,
+      1.25
+    ],
+    "max_automorphism_matchings": 96,
+    "min_unique_matchings": 3,
+    "min_transition_jaccard": 0.25,
+    "keep_after_cutwidth": 48,
+    "keep_after_line_graph": 16,
+    "cotengra_short": {
+      "max_repeats": 32,
+      "temperature": [
+        0.01,
+        0.1
+      ]
+    },
+    "deep_finalists": 4,
+    "cotengra_deep": {
+      "methods": [
+        "greedy"
+      ],
+      "max_repeats": 128,
+      "max_time": "equil:32",
+      "minimize": "combo",
+      "optlib": "random",
+      "parallel": false,
+      "reconfigure": true,
+      "reconf_opts": {},
+      "progbar": false
+    },
+    "return_finalists_per_code": 1,
+    "target_width_min": 17.0,
+    "min_cotengra_flops": 192000000.0,
+    "require_cotengra": true,
+    "objective": {
+      "lambda_depth": 0.02,
+      "mu_twoq": 0.0005,
+      "rho_lightcone": 0.02,
+      "eta_local_rank": 0.05,
+      "eta_witness_margin": 0.25
+    },
+    "require_live_target_snapshot": true,
+    "embedding_max_states": 2000000,
+    "embedding_timeout_seconds": 10.0,
+    "embedding_heuristic_iterations": 10000,
+    "matching_source": "target_native_tracked_frame",
+    "target_layout_trials": 32,
+    "target_matching_trials": 768,
+    "target_minimum_matchings": 3,
+    "protected_schedule_fraction": 0.7,
+    "protected_check_max_weight": 8,
+    "max_protected_templates": 32
+  },
+  "verifier_search": {
+    "enabled": true,
+    "gpu_backend": "auto",
+    "exact_backend": "auto",
+    "cuda_min_observables": 8,
+    "max_lightcone_qubits": 18,
+    "max_candidate_masks": 512,
+    "candidate_max_weight": 8,
+    "combination_base_rows": 32,
+    "include_matching_edge_masks": true,
+    "max_exact_observables_per_schedule": 48,
+    "max_selected_observables": 24,
+    "min_abs_expectation": 0.02,
+    "min_local_observables": 4,
+    "min_local_rank": 4,
+    "min_witness_margin_lcb": 0.0,
+    "min_coverage_fraction": 0.04,
+    "min_protected_checks": 0,
+    "min_linked_two_qubit_layers": 4,
+    "min_linked_axes": 2,
+    "cone_score_penalty": 0.002,
+    "min_template_protected_checks": 0,
+    "min_exact_local_certified_checks": 4,
+    "witness_optimizer": "multifeature_pair_lp",
+    "min_active_witness_features": 2,
+    "witness_support_size": 2,
+    "max_abs_witness_weight": 0.8,
+    "witness_candidate_limit": 16,
+    "verify_cost_mode": "full_selected_audit"
+  },
+  "recovery": {
+    "candidate_priority": [
+      "9bbe54b1ba83a355",
+      "5f51b108bc222837"
+    ]
+  }
+}

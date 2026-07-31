@@ -1,0 +1,22 @@
+{
+  "title": "CodeGapQA: Hardware-Oriented HCS-Inspired QPU Certification",
+  "description": "Public source code, sanitized confirmatory QASM, aggregate certificate metrics, tests, and manuscript for a 60-qubit hardware-oriented HCS-inspired local-witness certification experiment.",
+  "creators": [
+    {
+      "name": "Berrada, Abdelmalik",
+      "affiliation": "Independent Researcher, Casablanca, Morocco"
+    }
+  ],
+  "license": "Apache-2.0",
+  "upload_type": "software",
+  "keywords": [
+    "quantum computing",
+    "quantum certification",
+    "Hidden Code Sampling",
+    "CSS codes",
+    "finite-shot statistics",
+    "Open Quantum",
+    "Rigetti Cepheus-1-108Q"
+  ],
+  "notes": "The source code is Apache-2.0. The paper, figures, public QASM, and public data are CC BY 4.0. Preprint not peer reviewed."
+}

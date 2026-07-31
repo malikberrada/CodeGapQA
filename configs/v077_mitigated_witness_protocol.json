@@ -1,0 +1,117 @@
+{
+  "schema": "codegap.v077-mitigated-full-circuit-protocol.v1",
+  "protocol": "mitigated_full_circuit_v1",
+  "created_from_pilot": true,
+  "confirmatory_data_required": true,
+  "candidate_id": "9bbe54b1ba83a355",
+  "n": 48,
+  "calibration": {
+    "logical_qubits": [
+      6,
+      7,
+      15
+    ],
+    "physical_qubits": [
+      6,
+      7,
+      16
+    ],
+    "labels": [
+      "mitigated_basis_all0",
+      "mitigated_basis_all1",
+      "mitigated_basis_left",
+      "mitigated_basis_right"
+    ],
+    "all0_label": "mitigated_basis_all0",
+    "all1_label": "mitigated_basis_all1",
+    "expected_patterns": {
+      "mitigated_basis_all0": [
+        0,
+        0,
+        0
+      ],
+      "mitigated_basis_all1": [
+        1,
+        1,
+        1
+      ],
+      "mitigated_basis_left": [
+        1,
+        0,
+        0
+      ],
+      "mitigated_basis_right": [
+        0,
+        0,
+        1
+      ]
+    },
+    "model": "independent_single-qubit_assignment_channels",
+    "fresh_calibration_required_for_each_science_run": true
+  },
+  "witness": {
+    "features": [
+      {
+        "feature_index": 1,
+        "feature_name": "local_parity_1",
+        "support": [
+          6,
+          7
+        ],
+        "physical_support": [
+          6,
+          7
+        ],
+        "weight": 0.65,
+        "ideal_expectation": 0.7243989294795504,
+        "source": "matching_edge"
+      },
+      {
+        "feature_index": 8,
+        "feature_name": "local_parity_8",
+        "support": [
+          15
+        ],
+        "physical_support": [
+          16
+        ],
+        "weight": 0.35,
+        "ideal_expectation": -0.45801298688402453,
+        "source": "single_bit"
+      }
+    ],
+    "l1_norm": 1.0,
+    "active_features": 2,
+    "maximum_absolute_weight": 0.65,
+    "ideal_mean": 0.3105547587522992,
+    "adversary_supremum": 0.2,
+    "ideal_margin": 0.1105547587522992,
+    "adversary_generalization_penalty": 0.02,
+    "selection_objective": "maximize the smaller of preregistered ideal margin and pilot simultaneous-confidence hardware margin"
+  },
+  "confidence": {
+    "alpha_total": 0.01,
+    "alpha_calibration": 0.002,
+    "alpha_science": 0.008,
+    "continuous_box_optimization": true,
+    "optimization_seed": 20260725,
+    "optimization_popsize": 20,
+    "optimization_maxiter": 500,
+    "optimization_tolerance": 1e-10,
+    "optimization_safety_epsilon": 0.0001
+  },
+  "thresholds": {
+    "minimum_convention_bit_accuracy": 0.9,
+    "minimum_convention_margin": 0.2,
+    "minimum_assignment_determinant": 0.75,
+    "minimum_ideal_margin": 0.1,
+    "minimum_margin_lcb": 0.0
+  },
+  "shots": {
+    "calibration": 4000,
+    "diagnostic": 10000,
+    "recommended_diagnostic": 20000,
+    "final": 100000
+  },
+  "claim_boundary": "The confirmatory QPU result certifies only the preregistered readout-mitigated two-feature witness under the registered assignment-channel model and adversary bounds. It does not certify total-variation closeness of the complete 48-qubit output distribution."
+}

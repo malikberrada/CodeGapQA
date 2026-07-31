@@ -1,0 +1,20 @@
+{
+  "schema": "codegap.local-witness-protocol.v1",
+  "mode": "local_witness_v1",
+  "created_from": "V070 exploratory reanalysis of V068/V069 pilot data",
+  "minimum_active_features": 2,
+  "echo_repetitions": [1, 2, 3],
+  "probe_acceptance": {
+    "alpha": 0.01,
+    "minimum_convention_bit_accuracy": 0.9,
+    "minimum_convention_margin": 0.2,
+    "minimum_assignment_determinant": 0.75,
+    "minimum_local_mirror_survival_lcb": 0.85,
+    "maximum_local_mirror_drop_ucb": 0.15,
+    "maximum_active_lightcone_qubits": 2
+  },
+  "selection_rule": "Select the smallest exact-backward-lightcone witness implementation passing bitwise convention separation, local assignment-matrix stability, and simultaneous-confidence isolated-lightcone mirror checks. Break ties by local noise score, calibration score, and registered classical hardness objective.",
+  "claim_boundary": "The QPU result certifies only the preregistered active local witness observables through exact backward light cones. It does not certify total-variation closeness of the complete 48-qubit output distribution.",
+  "pilot_status": "PILOT_INFORMED_NOT_CONFIRMATORY",
+  "confirmatory_requirement": "All thresholds and circuit hashes must be frozen before collecting independent V072 QPU data."
+}

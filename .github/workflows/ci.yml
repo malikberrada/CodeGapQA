@@ -1,0 +1,29 @@
+name: public-release-ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -e ".[dev,tensor]"
+      - run: python scripts/verify_public_release.py
+      - run: >-
+          pytest -q
+          tests/test_gf2.py
+          tests/test_bicycle.py
+          tests/test_witness.py
+          tests/test_lightcone_v040.py
+          tests/test_lightcone_empty_masks_v040.py
+          tests/test_v165_lightcone_endianness.py
+          tests/test_freeze.py
